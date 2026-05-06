@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Hack Installer</title>
+    <style>
+        body {
+            background-color: #0d0b1e;
+            color: #b388ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 450px;
+            background-color: #0d0b1e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .theme-select {
+            background: #1a1635;
+            color: white;
+            border: 1px solid #555;
+            padding: 2px 5px;
+            font-size: 0.9em;
+        }
+
+        h1 {
+            font-style: italic;
+            font-weight: 800;
+            font-size: 2.2em;
+            margin: 10px 0 30px 0;
+            color: #8c6eff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .label {
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        input[type="text"], select {
+            background-color: #16122b;
+            border: 1px solid #332d5a;
+            color: #d1d1d1;
+            padding: 8px;
+            width: 320px;
+            outline: none;
+        }
+
+        .browse-btn {
+            background-color: #5e35b1;
+            color: white;
+            border: none;
+            padding: 0 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .checkbox-container {
+            margin: 20px 0;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .install-btn {
+            background: linear-gradient(to bottom, #9575cd, #7e57c2);
+            color: white;
+            border: none;
+            padding: 15px 60px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+
+        .install-btn:hover {
+            background: linear-gradient(to bottom, #b39ddb, #9575cd);
+        }
+
+        .status {
+            color: #00e676;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-top: 40px;
+            font-size: 80px;
+            color: #ff8a65;
+            opacity: 0.6;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.75em;
+            color: #6a5a8c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-row">
+        <span style="margin-right: 10px; font-size: 0.9em;">Theme:</span>
+        <select class="theme-select">
+            <option>7up</option>
+        </select>
+    </div>
+
+    <h1>Mega Hack Installer</h1>
+
+    <div class="field-container">
+        <span class="label">Mod Download Directory</span>
+        <div class="input-group">
+            <input type="text" value="C:\Users\Admin\Downloads">
+            <button class="browse-btn">...</button>
+        </div>
+    </div>
+
+    <div class="field-container">
+        <span class="label">License Backup Directory</span>
+        <div class="input-group">
+            <input type="text" value="C:\Users\Admin\Documents">
+            <button class="browse-btn">...</button>
+        </div>
+    </div>
+
+    <div class="field-container">
+        <span class="label">Select Version</span>
+        <div class="input-group">
+            <select style="width: 355px;">
+                <option>v9.1.3 (Geode)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="customizer">
+        <label for="customizer">Enable Customizer</label>
+    </div>
+
+    <button class="install-btn">Run Installation</button>
+
+    <div class="status">Connected</div>
+
+    <!-- Simplified CSS Logo Placeholder -->
+    <div class="logo">
+        <svg width="80" height="80" viewBox="0 0 100 100" fill="currentColor">
+            <path d="M20 20 L40 20 L50 40 L60 20 L80 20 L80 80 L65 80 L65 45 L50 65 L35 45 L35 80 L20 80 Z" />
+        </svg>
+    </div>
+
+    <div class="footer">
+        made with love from team ilovecr7dih❤
+    </div>
+</div>
+
+</body>
+</html>
