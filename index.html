@@ -3,187 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega Hack Installer</title>
+    <title>Download | Mega Hack Installer Official</title>
     <style>
+        :root {
+            --bg-dark: #0d0b1e;
+            --accent-purple: #8c6eff;
+            --text-gray: #b0b0b0;
+            --btn-gradient: linear-gradient(135deg, #9575cd 0%, #7e57c2 100%);
+        }
+
         body {
-            background-color: #0d0b1e;
-            color: #b388ff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-        }
-
-        .container {
-            width: 450px;
-            background-color: #0d0b1e;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .header-row {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .theme-select {
-            background: #1a1635;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
             color: white;
-            border: 1px solid #555;
-            padding: 2px 5px;
-            font-size: 0.9em;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(13, 11, 30, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 80%;
+            z-index: 1000;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--accent-purple);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 10% 80px 10%;
+            text-align: center;
+            background: radial-gradient(circle at top, #1a1635 0%, #0d0b1e 70%);
         }
 
         h1 {
-            font-style: italic;
-            font-weight: 800;
-            font-size: 2.2em;
-            margin: 10px 0 30px 0;
-            color: #8c6eff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #b388ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .label {
-            font-size: 0.85em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin-bottom: 30px;
         }
 
-        .input-group {
-            display: flex;
-            gap: 5px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-
-        input[type="text"], select {
-            background-color: #16122b;
-            border: 1px solid #332d5a;
-            color: #d1d1d1;
-            padding: 8px;
-            width: 320px;
-            outline: none;
-        }
-
-        .browse-btn {
-            background-color: #5e35b1;
+        .download-btn {
+            display: inline-block;
+            background: var(--btn-gradient);
             color: white;
-            border: none;
-            padding: 0 12px;
-            cursor: pointer;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 1.1rem;
             font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 20px rgba(126, 87, 194, 0.3);
         }
 
-        .checkbox-container {
-            margin: 20px 0;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(126, 87, 194, 0.4);
         }
 
-        .install-btn {
-            background: linear-gradient(to bottom, #9575cd, #7e57c2);
-            color: white;
-            border: none;
-            padding: 15px 60px;
+        /* App Preview Section */
+        .preview-container {
+            margin-top: 60px;
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .app-screenshot {
+            width: 100%;
+            max-width: 500px;
             border-radius: 12px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            margin-top: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 1px solid rgba(140, 110, 255, 0.2);
         }
 
-        .install-btn:hover {
-            background: linear-gradient(to bottom, #b39ddb, #9575cd);
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 80px 10%;
+            background: #090816;
         }
 
-        .status {
-            color: #00e676;
-            margin-top: 20px;
-            font-weight: bold;
+        .feature-card {
+            background: #16122b;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #251f4d;
+            transition: border 0.3s;
         }
 
-        .logo {
-            margin-top: 40px;
-            font-size: 80px;
-            color: #ff8a65;
-            opacity: 0.6;
+        .feature-card:hover {
+            border-color: var(--accent-purple);
         }
 
-        .footer {
-            margin-top: 20px;
-            font-size: 0.75em;
-            color: #6a5a8c;
+        .feature-card h3 {
+            color: var(--accent-purple);
+            margin-top: 0;
+        }
+
+        footer {
+            padding: 40px 10%;
+            text-align: center;
+            border-top: 1px solid #1a1635;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .v-tag {
+            background: #251f4d;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+            margin-bottom: 20px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header-row">
-        <span style="margin-right: 10px; font-size: 0.9em;">Theme:</span>
-        <select class="theme-select">
-            <option>7up</option>
-        </select>
-    </div>
-
-    <h1>Mega Hack Installer</h1>
-
-    <div class="field-container">
-        <span class="label">Mod Download Directory</span>
-        <div class="input-group">
-            <input type="text" value="C:\Users\Admin\Downloads">
-            <button class="browse-btn">...</button>
+    <nav>
+        <div class="logo-text">Mega Hack</div>
+        <div class="nav-links">
+            <a href="#" style="color: white; text-decoration: none; font-size: 0.9rem;">Support</a>
         </div>
-    </div>
+    </nav>
 
-    <div class="field-container">
-        <span class="label">License Backup Directory</span>
-        <div class="input-group">
-            <input type="text" value="C:\Users\Admin\Documents">
-            <button class="browse-btn">...</button>
+    <section class="hero">
+        <span class="v-tag">LATEST VERSION: v9.1.3</span>
+        <h1>The Ultimate Toolset</h1>
+        <p>Experience the next generation of modding with a streamlined installer, customizer support, and Geode compatibility.</p>
+        
+        <a href="#" class="download-btn">Download for Windows</a>
+
+        <div class="preview-container">
+            <!-- Referencing your image verbatim -->
+            <img src="{021DCD76-D0A0-4419-9394-07CF6322895C}.png" alt="Mega Hack Installer Preview" class="app-screenshot">
         </div>
-    </div>
+    </section>
 
-    <div class="field-container">
-        <span class="label">Select Version</span>
-        <div class="input-group">
-            <select style="width: 355px;">
-                <option>v9.1.3 (Geode)</option>
-            </select>
+    <section class="features">
+        <div class="feature-card">
+            <h3>Geode Support</h3>
+            <p>Seamlessly integrated with the Geode mod loader for maximum performance and stability.</p>
         </div>
-    </div>
+        <div class="feature-card">
+            <h3>Cloud Sync</h3>
+            <p>Your license backups are handled automatically. Never lose your settings again.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Theme Engine</h3>
+            <p>Fully customizable interface including the classic "7up" theme and more.</p>
+        </div>
+    </section>
 
-    <div class="checkbox-container">
-        <input type="checkbox" id="customizer">
-        <label for="customizer">Enable Customizer</label>
-    </div>
-
-    <button class="install-btn">Run Installation</button>
-
-    <div class="status">Connected</div>
-
-    <!-- Simplified CSS Logo Placeholder -->
-    <div class="logo">
-        <svg width="80" height="80" viewBox="0 0 100 100" fill="currentColor">
-            <path d="M20 20 L40 20 L50 40 L60 20 L80 20 L80 80 L65 80 L65 45 L50 65 L35 45 L35 80 L20 80 Z" />
-        </svg>
-    </div>
-
-    <div class="footer">
-        made with love from team ilovecr7dih❤
-    </div>
-</div>
+    <footer>
+        <p>made with love from team ilovecr7dih❤</p>
+        <p>&copy; 2026 Mega Hack Installer. For educational purposes only.</p>
+    </footer>
 
 </body>
 </html>
